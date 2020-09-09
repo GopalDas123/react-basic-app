@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import "./index.css";
 function App() {
+  const [isLit, setLit] = useState(false);
+  let [count,setCount]=useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`room ${isLit ? "lit" : "dark"}`}>
+      <h1>This Room Is {isLit ? "lit" : "dark"}<br/>
+      Counter:{count}
+      </h1>
+      <button className="btn" onClick={() => setLit(!isLit)}>{isLit ? "TURN OFF" : "TURN ON"}  </button>
+      <button className="btn" onClick={()=> setCount(++count)}>+</button>
+      <button className="btn" onClick={()=> setCount(--count)}>-</button>
     </div>
   );
 }
