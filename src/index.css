@@ -1,7 +1,8 @@
 html, body, #root, .room {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  height: 120%;
+  height: 96%;
+  overflow: hidden;
   margin: 0;
   text-align: center;
   padding: 10px;
@@ -30,3 +31,10 @@ html, body, #root, .room {
 .btn:focus{
   outline: none;
 }
+.gopal{
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin:330px auto; 
+  color:red;
+} 

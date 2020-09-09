@@ -11,6 +11,7 @@ function App() {
       <button className="btn" onClick={() => setLit(!isLit)}>{isLit ? "TURN OFF" : "TURN ON"}  </button>
       <button className="btn" onClick={()=> setCount(++count)}>+</button>
       <button className="btn" onClick={()=> setCount(--count)}>-</button>
+      <div className="gopal">Developed By&nbsp;<a href="https://www.github.com/GopalDas123">Gopal Das</a></div>
     </div>
   );
 }
